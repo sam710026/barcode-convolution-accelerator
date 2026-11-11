@@ -1,0 +1,303 @@
+{
+  "scope": "RTL simulation only; not lint, synthesis, STA, GLS or measured PPA",
+  "period_ns": 2.28,
+  "sram_model": "<licensed>/sram_512x8.v",
+  "started_utc": "2026-11-11T16:15:45.068858+00:00",
+  "source_sha256": {
+    "01_RTL/core.v": "09254f473499f56324db772e33025df77deeca484d2af1323059325f79878547",
+    "01_RTL/rtl_01.f": "f52734fb79e992b8e6d0361b73dddcb89683e804a456e2b3bf6dc08bf3402b8d",
+    "00_TESTBED/testbench.v": "1445540189d2ccfb309bdfae106b99b6d5f29c9fc2b30a6658206cb9f4f4c1e8",
+    "sim/sram_512x8.v": "937197ff94cc630b8a95b0db184508b9e5e59704303625667e9c97d7c7e66aea",
+    "scripts/run_tests.py": "00d6f5bf36766c5b39448a318edb4c7061bdccfa542ebce0331f9d30d276c70d",
+    "00_TESTBED/PATTERNS/golden_tb1.dat": "8f11382e993c994ad0bb0b6dd39e227f38f7dc007f188ed62d021e0e399d498b",
+    "00_TESTBED/PATTERNS/golden_tb2.dat": "be2595b968b5461f046a1309899bfbc7a691edd0c2236b7751e65f2a67c76b6d",
+    "00_TESTBED/PATTERNS/golden_tb3.dat": "33dc3dd0bfe4a675ba939e75d2b421abf629e3cf825b9a084f58343b60b4a57d",
+    "00_TESTBED/PATTERNS/golden_tb4.dat": "20994b59f6023dcc567dc31a8c3543e8cd7d1054f4616efd85ebe5d8a0f893da",
+    "00_TESTBED/PATTERNS/golden_tb5.dat": "79a484d2e0b43ce83ba6a34c4d16c5cf0e341d3ee37f6cd59bbc305e235a313a",
+    "00_TESTBED/PATTERNS/golden_tb6.dat": "1891b813bb84777b661efb5aeca681bc80e8e14534ca644b02bafac803cded23",
+    "00_TESTBED/PATTERNS/image_tb0.dat": "78d7f34d8db6b040beb5d59c1e8c232f3a0203d74f7151fd1746c30b6b112ddf",
+    "00_TESTBED/PATTERNS/image_tb1.dat": "e9a0df1dbbcc1fd8ab4f6e6bfe7c5cfac60903d30332bc73baa1b98e3e7d035f",
+    "00_TESTBED/PATTERNS/image_tb2.dat": "75e890cec58ff26303ec9bb205ae79e2cd7f3c796df3f898fca9436969cebd85",
+    "00_TESTBED/PATTERNS/image_tb3.dat": "c119c80432d0b6cb0a699e38200bb6b75a6b10e9cb28d09a792d7e16ca765eb6",
+    "00_TESTBED/PATTERNS/image_tb4.dat": "27b2d1e55c57fdec178a22bfef53c61a3f9efa4955e2a1b9f4cee9cb62e557fa",
+    "00_TESTBED/PATTERNS/image_tb5.dat": "c8c9c75e93e1d64e270771ef9a9b0a354723508a5c4854e24c03bef19e2c718d",
+    "00_TESTBED/PATTERNS/image_tb6.dat": "35fb842061a4038e254b09e5dc5c14ac4ee122e8cc6349e199648b4fabd5486e",
+    "00_TESTBED/PATTERNS/weight_tb1.dat": "ff517189439bf317591b9cece6022eed9b5876803c36401d176125eee2a834ed",
+    "00_TESTBED/PATTERNS/weight_tb2.dat": "2acc53ca4207be2e42c8d76e894d293775419a525ebd67c8113cf32c92c14023",
+    "00_TESTBED/PATTERNS/weight_tb3.dat": "9ac73623bbddb1af5fbb0fb7e175031e8e826be8e36c0a479ce81111518ee6cd",
+    "00_TESTBED/PATTERNS/weight_tb4.dat": "eb2b415cf307186598b49d3517accb467e7019773ec2a179ed57728f3baa93ab",
+    "00_TESTBED/PATTERNS/weight_tb5.dat": "16703596c7a7d39e0431fb0542f593683ede9955c3c9ee8c61c69dcf1412693b",
+    "00_TESTBED/PATTERNS/weight_tb6.dat": "ee82d13b88b274d804395b4a24d84f71c318d494c36051d6938d3bf40ddbe2e2",
+    "selected_sram_model": "9f325ac686bf3e5a87ef7f1341996f78c0cd31565ca7cd4694d3f836bfaba3c6"
+  },
+  "cases": [
+    {
+      "case": "tb0",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb0",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb0/csrc",
+          "-o",
+          "<run>/tb0/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.575,
+        "log": "<run>/tb0/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb0/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.668,
+        "log": "<run>/tb0/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": null
+    },
+    {
+      "case": "tb1",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb1",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb1/csrc",
+          "-o",
+          "<run>/tb1/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.525,
+        "log": "<run>/tb1/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb1/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.669,
+        "log": "<run>/tb1/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": 1041
+    },
+    {
+      "case": "tb2",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb2",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb2/csrc",
+          "-o",
+          "<run>/tb2/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.526,
+        "log": "<run>/tb2/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb2/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.719,
+        "log": "<run>/tb2/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": 1041
+    },
+    {
+      "case": "tb3",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb3",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb3/csrc",
+          "-o",
+          "<run>/tb3/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.525,
+        "log": "<run>/tb3/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb3/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.719,
+        "log": "<run>/tb3/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": 1042
+    },
+    {
+      "case": "tb4",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb4",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb4/csrc",
+          "-o",
+          "<run>/tb4/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.576,
+        "log": "<run>/tb4/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb4/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.87,
+        "log": "<run>/tb4/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": 2066
+    },
+    {
+      "case": "tb5",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb5",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb5/csrc",
+          "-o",
+          "<run>/tb5/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.576,
+        "log": "<run>/tb5/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb5/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.721,
+        "log": "<run>/tb5/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": 1045
+    },
+    {
+      "case": "tb6",
+      "pass": true,
+      "compile": {
+        "command": [
+          "vcs",
+          "<project>/00_TESTBED/testbench.v",
+          "<licensed>/sram_512x8.v",
+          "<project>/01_RTL/core.v",
+          "-full64",
+          "+v2k",
+          "+notimingcheck",
+          "-sverilog",
+          "+define+tb6",
+          "+define+CYCLE=2.28",
+          "-top",
+          "testbed",
+          "-Mdir=<run>/tb6/csrc",
+          "-o",
+          "<run>/tb6/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 3.427,
+        "log": "<run>/tb6/compile.log"
+      },
+      "simulation": {
+        "command": [
+          "<run>/tb6/simv"
+        ],
+        "cwd": "<project>/01_RTL",
+        "returncode": 0,
+        "seconds": 0.87,
+        "log": "<run>/tb6/simulation.log"
+      },
+      "errors": [],
+      "execution_cycles": 2069
+    }
+  ],
+  "pass": true,
+  "sources_unchanged_during_run": true
+}

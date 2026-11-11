@@ -1,0 +1,38 @@
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version X-2025.06_Full64 -- Thu Nov 12 00:14:37 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '<project>/00_TESTBED/testbench.v'
+Parsing design file '<project>/sim/sram_512x8.v'
+Parsing design file '<project>/01_RTL/core.v'
+Top Level Modules:
+       testbed
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+recompiling module testbed
+recompiling module sram_512x8
+recompiling module cap_ff8
+recompiling module hw3_fused_heap
+All of 4 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x <run>/tb0/simv ]; then chmod a-x <run>/tb0/simv; fi
+g++  -o <run>/tb0/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/CAD/cad/synopsys/vcs/2025.06/linux64/lib -L/CAD/cad/synopsys/vcs/2025.06/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _2505258_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -lsimprofile -luclinative /CAD/cad/synopsys/vcs/2025.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /CAD/cad/synopsys/vcs/2025.06/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+<run>/tb0/simv up to date
+CPU time: 1.619 seconds to compile + .434 seconds to elab + .230 seconds to link

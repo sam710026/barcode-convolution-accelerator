@@ -1,0 +1,12 @@
+student ID: r15943079
+
+Clock Period: 2.28 (ns)
+
+Execution cycle for tb1: 1041
+Execution cycle for tb2: 1041
+Execution cycle for tb3: 1042
+Execution cycle for tb4: 2066
+Execution cycle for tb5: 1045
+Execution cycle for tb6: 2069
+
+Area:   571937.564082     (um^2)

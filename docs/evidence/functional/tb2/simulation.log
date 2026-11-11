@@ -1,0 +1,38 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Nov 12 00:15 2026
+--------------------------------------------------
+          STAGE 1:  BARCODE DECODING
+--------------------------------------------------
+All Configurations Correct! Permission Granted to Enter STAGE 2
+--------------------------------------------------
+          STAGE 2:  CONVOLUTION
+--------------------------------------------------
+
+    *************************************
+    *    OVERALL COMPARISON RESULTS      *
+    *************************************
+--------------------------------------------------
+Case: K=3, W8, valid=1
+Result writes: 4096
+Execution cycles: 1041
+
+         #    ###############    _   _ 
+        #     #             #    *   * 
+   #   #      #   CORRECT   #      |   
+    # #       #             #    \___/ 
+     #        ###############          
+
+--------------------------------------------------
+        CONGRATULATION! ALL DATA PASS!            
+--------------------------------------------------
+Total SPEC Error: 0
+$finish called from file "<project>/00_TESTBED/testbench.v", line 392.
+$finish at simulation time             14056200
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 14056200 ps
+CPU Time:      0.440 seconds;       Data structure size:   0.1Mb
+Thu Nov 12 00:15:11 2026
